@@ -1,0 +1,76 @@
+#marera numero1.txt
+# archivo=open("saludo.txt")
+# contenido=archivo.read()
+# print(contenido)
+# archivo.close()
+#marera numero2.txt R
+# with open("saludo.txt","r") as archivo:
+#     texto=archivo.read()
+# print(texto)
+#escribir en archivo W
+# with open("datos.txt","w") as archivo:#cierra archivo de la sindentación
+#     archivo.write("Ana")
+# with open("datos.txt","r") as archivo: #leer archivo
+#     texto=archivo.read()
+# print(texto) 
+#agregar archivo a archivo A "append"
+# with open("registro.txt","w") as archivo:
+#     archivo.write("Ana\n")     #"\n" salto de linea
+# with open("registro.txt","a") as archivo:
+#     archivo.write("luis\n")
+#     archivo.write("carlos\n")
+# with open("registro.txt","r") as archivo:
+#     leer=archivo.read()
+# print(leer)
+#linea por linea
+# with open("registro.txt","r") as archivo:
+#     for linea in archivo:
+#         print(linea.strip())#strip elimina espacios o saltos de linea
+# print("final")
+# todo lo leido desde .txt llega como texto(str)
+# with open("edades.txt","a") as archivo:
+#     archivo.write("25\n")
+# with open ("edades.txt","r")as archivo:
+#     for linea in archivo:
+#         edad= int(linea.strip())
+#         print(edad+5)
+
+#tres formas de leer archivos
+# with open("registro.txt","r") as archivo:
+#     datos=archivo.readlines()
+# print(datos[1].strip())#leer una linea en especifico
+#escribir listas en archivos
+# productos=["mouse","teclado","monitor"]
+
+# with open("productos.txt","w") as archivo:
+#     for producto in productos:
+#         archivo.write(producto +"\n")
+#writelines() es util pero con precision
+# nombres=["Ana\n","Luis\n","Carlos\n"] #  se debe agragr con "\n" en la lista 
+
+# with open("nombres.txt","w") as archivo:
+#     archivo.writelines(nombres)
+
+#guardar registros separados por una coma
+# productos=[
+#     {"nombre": "mouse", "precio": 50000, "cantidad": 5},
+#     {"nombre": "teclado", "precio": 80000, "cantidad": 3},
+# ]
+# with open ("productos.txt","w") as archivo:
+#     for producto in productos:
+#         archivo.write(producto["nombre"]+","+
+#          str(producto["precio"])+","+
+#          str(producto["cantidad"])+"\n")
+#leer un registro con split(",")
+linea = "teclado,80000,3"
+datos = linea.strip().split(",")
+nombres = datos[0]
+precio = int(datos[1])
+cantidad = int (datos[2])
+total = precio * cantidad
+print (datos)
+print (nombres)
+print (precio)
+print (cantidad)
+print (total)
+
